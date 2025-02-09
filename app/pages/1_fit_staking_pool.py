@@ -160,7 +160,7 @@ def main():
 
         # --- Optional clamp then normalize the fitted weights so they sum to 100 ---
         if clamp_negatives:
-            y_pred_points = np.clip(y_pred_points, 1e-9, None)
+            y_pred_points = np.clip(y_pred_points, 1e-9, None)  # remplacer les valeurs négatives
 
         fitted_sum = np.sum(y_pred_points)
         if fitted_sum > 0:
